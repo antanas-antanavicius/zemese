@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Darbų planas – SmartFarm</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand">🌱 Smart<span>Farm</span></div>
+  <div class="tagline">Išmanus tavo ūkio valdymas</div>
+  <nav class="nav">
+    <a href="index.html">🏠 Apžvalga</a>
+    <a href="fields.html">🌾 Mano laukai</a>
+    <a href="tasks.html" class="active">📋 Darbų planas</a>
+    <a href="finance.html">💶 Finansai</a>
+    <a href="irrigation.html">💧 Laistymas</a>
+    <a href="weather.html">🌤️ Orų prognozė</a>
+    <a href="settings.html">⚙️ Ūkio nustatymai</a>
+  </nav>
+  <div class="side-note">Tavo ūkio duomenys saugomi šiame įrenginyje, tavo naršyklėje.</div>
+</aside>
+
+<main class="main">
+<header class="topbar">
+  <div><h1 id="pageTitle">Darbų planas</h1><div class="sub" id="welcomeText">Sveiki atvykę į SmartFarm</div></div>
+  <div class="pill" id="farmPill">🌿 Mano ūkis</div>
+</header>
+
+<section class="page active" id="tasks">
+  <div class="two">
+    <div class="card">
+      <div class="section-head"><h2>Pridėti darbą</h2></div>
+      <form id="taskForm" class="form-grid">
+        <div class="full"><label for="taskName">Darbo pavadinimas</label><input id="taskName" required placeholder="Pvz. Patręšti lauką"></div>
+        <div><label for="taskDate">Terminas</label><input id="taskDate" type="date" required></div>
+        <div><label for="taskField">Susijęs laukas</label><select id="taskField"><option value="">Visas ūkis</option></select></div>
+        <div class="full"><label for="taskNotes">Pastabos</label><input id="taskNotes" placeholder="Papildoma informacija"></div>
+        <div class="full"><button type="submit">Pridėti darbą</button></div>
+      </form>
+    </div>
+    <div class="card"><h2>Darbo planavimas</h2><p class="notice">Įrašyk svarbiausius ūkio darbus, nustatyk terminus ir pažymėk juos atliktais. Darbų sąrašas išsaugomas automatiškai.</p><div class="stat-value" id="taskProgress">0 / 0</div><div class="stat-foot">Atliktų darbų</div></div>
+  </div>
+  <div class="card"><div class="section-head"><h2>Užduočių sąrašas</h2></div><div id="tasksList"></div></div>
+</section>
+</main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

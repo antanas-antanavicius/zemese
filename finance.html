@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ūkio finansai – SmartFarm</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand">🌱 Smart<span>Farm</span></div>
+  <div class="tagline">Išmanus tavo ūkio valdymas</div>
+  <nav class="nav">
+    <a href="index.html">🏠 Apžvalga</a>
+    <a href="fields.html">🌾 Mano laukai</a>
+    <a href="tasks.html">📋 Darbų planas</a>
+    <a href="finance.html" class="active">💶 Finansai</a>
+    <a href="irrigation.html">💧 Laistymas</a>
+    <a href="weather.html">🌤️ Orų prognozė</a>
+    <a href="settings.html">⚙️ Ūkio nustatymai</a>
+  </nav>
+  <div class="side-note">Tavo ūkio duomenys saugomi šiame įrenginyje, tavo naršyklėje.</div>
+</aside>
+
+<main class="main">
+<header class="topbar">
+  <div><h1 id="pageTitle">Ūkio finansai</h1><div class="sub" id="welcomeText">Sveiki atvykę į SmartFarm</div></div>
+  <div class="pill" id="farmPill">🌿 Mano ūkis</div>
+</header>
+
+<section class="page active" id="finance">
+  <div class="grid">
+    <div class="card"><div class="stat-label">Pajamos</div><div class="stat-value" id="totalIncome">0 €</div></div>
+    <div class="card"><div class="stat-label">Išlaidos</div><div class="stat-value" id="totalExpense">0 €</div></div>
+    <div class="card"><div class="stat-label">Balansas</div><div class="stat-value" id="totalBalance">0 €</div></div>
+    <div class="card"><div class="stat-label">Įrašų skaičius</div><div class="stat-value" id="financeCount">0</div></div>
+  </div>
+  <div class="two">
+    <div class="card"><h2>Pridėti finansinį įrašą</h2>
+      <form id="financeForm" class="form-grid">
+        <div><label for="financeType">Tipas</label><select id="financeType"><option value="income">Pajamos</option><option value="expense">Išlaidos</option></select></div>
+        <div><label for="financeAmount">Suma (€)</label><input id="financeAmount" type="number" min="0.01" step="0.01" required></div>
+        <div class="full"><label for="financeDescription">Aprašymas</label><input id="financeDescription" required placeholder="Pvz. Sėklų pirkimas"></div>
+        <div class="full"><label for="financeDate">Data</label><input id="financeDate" type="date" required></div>
+        <div class="full"><button type="submit">Išsaugoti įrašą</button></div>
+      </form>
+    </div>
+    <div class="card"><h2>Finansų patarimas</h2><p class="notice">Registruok visas ūkio pajamas ir išlaidas. Taip galėsi stebėti, kiek kainuoja sezonas ir ar ūkis dirba pelningai.</p></div>
+  </div>
+  <div class="card"><h2>Finansų istorija</h2><div class="table-wrap" id="financeTable"></div></div>
+</section>
+</main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

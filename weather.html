@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orų prognozė – SmartFarm</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand">🌱 Smart<span>Farm</span></div>
+  <div class="tagline">Išmanus tavo ūkio valdymas</div>
+  <nav class="nav">
+    <a href="index.html">🏠 Apžvalga</a>
+    <a href="fields.html">🌾 Mano laukai</a>
+    <a href="tasks.html">📋 Darbų planas</a>
+    <a href="finance.html">💶 Finansai</a>
+    <a href="irrigation.html">💧 Laistymas</a>
+    <a href="weather.html" class="active">🌤️ Orų prognozė</a>
+    <a href="settings.html">⚙️ Ūkio nustatymai</a>
+  </nav>
+  <div class="side-note">Tavo ūkio duomenys saugomi šiame įrenginyje, tavo naršyklėje.</div>
+</aside>
+
+<main class="main">
+<header class="topbar">
+  <div><h1 id="pageTitle">Orų prognozė</h1><div class="sub" id="welcomeText">Sveiki atvykę į SmartFarm</div></div>
+  <div class="pill" id="farmPill">🌿 Mano ūkis</div>
+</header>
+
+<section class="page active" id="weather">
+  <div class="card">
+    <div class="section-head"><h2>🌤️ Automatinė orų prognozė</h2><span class="badge">Open-Meteo API</span></div>
+    <p class="notice">Prognozė gaunama internetu pagal tavo ūkio vietovę. Ji automatiškai atnaujinama kas 30 minučių.</p>
+    <div class="form-grid">
+      <div><label for="weatherLocation">Ūkio vietovė (miestas arba miestelis)</label><input id="weatherLocation" placeholder="Pvz. Kaunas"></div>
+      <div style="align-self:end"><button type="button" onclick="loadWeather()">Atnaujinti prognozę</button></div>
+    </div>
+    <div id="weatherStatus" class="weather-status">Ruošiama orų prognozė...</div>
+    <div id="weatherCurrent"></div>
+    <h3>5 dienų prognozė</h3>
+    <div id="weatherForecast" class="forecast"></div>
+    <p class="notice" style="margin-top:15px">Orų duomenų šaltinis: <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a>. Prognozė yra informacinė, todėl prieš svarbius ūkio darbus patikrink ir oficialius įspėjimus.</p>
+  </div>
+</section>
+</main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

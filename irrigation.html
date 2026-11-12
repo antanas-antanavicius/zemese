@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laistymo valdymas – SmartFarm</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand">🌱 Smart<span>Farm</span></div>
+  <div class="tagline">Išmanus tavo ūkio valdymas</div>
+  <nav class="nav">
+    <a href="index.html">🏠 Apžvalga</a>
+    <a href="fields.html">🌾 Mano laukai</a>
+    <a href="tasks.html">📋 Darbų planas</a>
+    <a href="finance.html">💶 Finansai</a>
+    <a href="irrigation.html" class="active">💧 Laistymas</a>
+    <a href="weather.html">🌤️ Orų prognozė</a>
+    <a href="settings.html">⚙️ Ūkio nustatymai</a>
+  </nav>
+  <div class="side-note">Tavo ūkio duomenys saugomi šiame įrenginyje, tavo naršyklėje.</div>
+</aside>
+
+<main class="main">
+<header class="topbar">
+  <div><h1 id="pageTitle">Laistymo valdymas</h1><div class="sub" id="welcomeText">Sveiki atvykę į SmartFarm</div></div>
+  <div class="pill" id="farmPill">🌿 Mano ūkis</div>
+</header>
+
+<section class="page active" id="irrigation">
+  <div class="two">
+    <div class="card"><h2>Laistymo valdymas</h2><p class="notice">Šiame demonstraciniame puslapyje jungiklis tik imituoja laistymo sistemos įjungimą. Jis nevaldo tikros įrangos.</p><div id="irrigationList"></div></div>
+    <div class="card"><h2>Dirvožemio drėgmė</h2><div id="moistureList"></div><p class="notice">Drėgmės reikšmes gali keisti skiltyje „Mano laukai“. Tikriems jutiklių duomenims reikėtų prijungti jutiklį ir serverį.</p></div>
+  </div>
+</section>
+</main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
